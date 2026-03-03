@@ -57,7 +57,7 @@ public class CalendarsController {
     String[] wdays = {"(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)"};
 
     for (int x = 0; x < 7; x++) {
-      Map<String, Object> day_map = new HashMap<>();
+      Map<String, Object> dayMap = new HashMap<>();
       LocalDate currentDate = todaysDate.plusDays(x);
 
       List<String> todayPlans = new ArrayList<>();
@@ -71,7 +71,7 @@ public class CalendarsController {
       day_map.put("date", currentDate.getDayOfMonth());
       day_map.put("plans", todayPlans);
 
-      weekDays.add(day_map);
+      weekDays.add(dayMap);
     }
 
     return weekDays;
